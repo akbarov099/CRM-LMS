@@ -1,0 +1,86 @@
+.payment_toolbar {
+  @include displayFlex(space-between);
+
+  &--input {
+    @include alignItems(center);
+    position: relative;
+
+    input {
+      width: 380px;
+      height: 48px;
+      border-radius: 10px;
+      background: $white;
+      font-family: $roboto;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 2%;
+      color: $black;
+      padding-right: 35px;
+
+      &::placeholder {
+        font-family: $roboto;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        color: $gray;
+      }
+    }
+    &--icon {
+      color: $black;
+      right: 15px;
+      position: absolute;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+  &--filter {
+    width: 90%;
+    height: 68px;
+    border-radius: 18px;
+    @include displayFlex(end);
+    gap: 20px;
+
+    .payment_toolbar--item {
+      width: 20%;
+      height: 48px;
+      @include displayFlex(center);
+      gap: 8px;
+      font-family: $roboto;
+      font-weight: 500;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 16px;
+      color: $black_light;
+      cursor: pointer;
+      transition: 0.5s linear;
+      background-color: $white;
+      border-radius: 10px;
+
+      &:hover {
+        color: $white;
+        background: $blue;
+      }
+    }
+
+    .active{
+         width: 20%;
+      height: 48px;
+      @include displayFlex(center);
+      gap: 8px;
+      font-family: $roboto;
+      font-weight: 500;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 16px;
+      color: $white;
+      cursor: pointer;
+      transition: 0.5s linear;
+      background-color: $blue;
+      border-radius: 10px;
+    }
+  }
+}

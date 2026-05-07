@@ -1,0 +1,14 @@
+// @include displayFlex(center);
+
+@mixin displayFlex($content: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $content;
+}
+
+// @include alignItems(center);;
+
+@mixin alignItems($content: center) {
+  display: flex;
+  align-items: $content;
+}

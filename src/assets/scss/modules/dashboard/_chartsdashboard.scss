@@ -1,0 +1,48 @@
+.charts {
+  margin: 80px 0;
+  font-family: $inter;
+
+  h2 {
+    font-size: 24px; 
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: $dark-slate; 
+    display: flex;
+    align-items: center;
+    
+    &::before {
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: $blue; 
+      margin-right: 12px;
+      border-radius: 4px;
+    }
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: $slate-muted; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .chartBox {
+    background: $chart-bg;
+    backdrop-filter: blur(10px); 
+    padding: 30px;
+    border-radius: 20px; 
+    border: 1px solid $chart-border;
+    box-shadow: $chart-shadow-sm, $chart-shadow-lg;
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $chart-hover-shadow;
+    }
+  }
+}

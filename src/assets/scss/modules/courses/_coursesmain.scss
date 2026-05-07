@@ -1,0 +1,91 @@
+.coursesmain__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  list-style: none;
+  margin-top: 42px;
+  padding: 0;
+
+  .groupsmain__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+    background: $white;
+    border-radius: 20px; 
+    padding: 30px;
+    border: 1px solid $card-border-soft; 
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: $card-shadow-soft; 
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100px;
+      height: 100px;
+      background: rgba($primary-color, 0.05);
+      border-radius: 50%;
+      transition: 0.5s ease;
+    }
+
+    &:hover {
+      border-color: $primary-color;
+      box-shadow: $card-hover-primary-shadow, $card-hover-dark-shadow;
+
+      &::after {
+        transform: scale(3);
+        background: rgba($blue, 0.08);
+      }
+
+      h2 {
+        color: $primary-color;
+      }
+    }
+
+    h2 {
+      font-family: $golos_fonts;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.3;
+      color: $text-main;
+      margin-bottom: 12px;
+      z-index: 1;
+      transition: color 0.3s ease;
+    }
+
+    h3 {
+      font-family: $roboto;
+      font-weight: 500;
+      font-size: 14px;
+      color: $text-muted;
+      z-index: 1;
+      margin: 8px 0;
+    }
+
+    h4 {
+      font-family: $roboto;
+      font-weight: 600;
+      font-size: 17px;
+      color: $teal; 
+      background: $teal-bg-light; 
+      padding: 6px 14px;
+      border-radius: 8px;
+      width: fit-content;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      
+      &::before {
+        content: '•';
+        margin-right: 8px;
+        font-size: 20px;
+      }
+    }
+  }
+}

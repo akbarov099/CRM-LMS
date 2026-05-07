@@ -1,0 +1,76 @@
+.header_profil {
+  gap: 48px;
+
+  .header_profil_avatar_name {
+   @include alignItems(center);
+    gap: 10px;
+
+    .header_profil_avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .header_profil_icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 3px;
+      object-fit: contain;
+    }
+
+    .profil_name {
+      color: $black;
+      font-family: $golos_fonts;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .profil_jobtitle {
+      color: $gray_light;
+      font-family: $golos_fonts;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  .header_profil_arrow {
+    color: $gray_light;
+    font-size: 20px;
+    margin: 0 6px;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  .profile_dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 150px;
+    background: $white;
+    box-shadow: 1px 0px 32px -4px rgba(17, 17, 17, 0.08);
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    z-index: 2;
+
+    a {
+      color: $black;
+      font-family: $golos_fonts;
+      font-size: 14px;
+      font-weight: 400;
+      .profile_option {
+        padding: 8px 12px;
+        cursor: pointer;
+        text-align: start;
+
+        &:hover {
+          background: $gray_light;
+        }
+      }
+    }
+  }
+}

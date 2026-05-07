@@ -1,0 +1,90 @@
+// color
+$body: #f5f6fa;
+$white: #fff;
+$white_dark: #e6e6e6;
+$white_dark2: #e6eef8;
+$light-white: #f6fafd;
+$black: #000;
+$black_light: #1a1a1a;
+$border: rgba(0, 0, 0, 0.38);
+$shadow: rgba(0, 0, 0, 0.06);
+$shadow2: rgba(0, 0, 0, 0.1);
+$blue: rgb(39, 84, 155);
+$gray: #96989a;
+$gray_light: #b3b3b3;
+$red: #ff0000;
+$light_red: #dc2626;
+$light_red2: #fee2e2; 
+
+$green: #00ae11;
+$light_green: #dcfce7; 
+
+$orang: #ffb84d;
+$light_orang2: #fef3c7; 
+$light_orang3: #ffe2b8;
+$purple: #7f77dd;
+$light_purple: #ede9fe; 
+
+$primary-color: #4f46e5;
+$teal: #1d9e75;
+$light_blue_bg: #e0f2fe; 
+$column_default_bg: #f3f4f6; 
+
+$amber: #ba7517;
+$text-main: #1e293b;
+$text-muted: #64748b;
+$text_reason: #b91c1c; 
+
+// Dashboard 
+$dark-slate: #0f172a;      
+$slate-muted: #475569;    
+$card-border: rgba(0, 0, 0, 0.08);
+
+// Badge 
+$bg-success-light: #eaf3de;
+$text-success-dark: #3b6d11;
+$bg-danger-light: #fcebeb;
+$text-danger-dark: #a32d2d;
+$bg-warning-light: #faeeda;
+$text-warning-dark: #854f0b;
+$bg-info-light: #e8f4f1;
+
+// Charts & Box effects
+$chart-bg: rgba($white, 0.8);
+$chart-border: rgba(226, 232, 240, 0.8);
+$chart-shadow-sm: 0 4px 6px -1px rgba($black, 0.1), 0 2px 4px -2px rgba($black, 0.05);
+$chart-shadow-lg: 0 20px 25px -5px rgba($black, 0.03);
+$chart-hover-shadow: 0 25px 50px -12px rgba($black, 0.08);
+$dark-slate: #0f172a;
+$slate-muted: #475569;
+
+// Courses Card Effects
+$card-border-soft: rgba(226, 232, 240, 0.7);
+$card-shadow-soft: 0 4px 6px -1px rgba($black, 0.05), 0 10px 15px -3px rgba($black, 0.03);
+$card-hover-primary-shadow: 0 20px 25px -5px rgba($primary-color, 0.1);
+$card-hover-dark-shadow: 0 10px 10px -5px rgba($black, 0.04);
+
+// Price/Status 
+$teal-bg-light: rgba(5, 150, 105, 0.1);
+$teal-dark: #059669; 
+
+// Table specific
+$table-shadow: 1px 0px 32px -4px rgba(17, 17, 17, 0.08);
+$table-row-border: $white_dark;
+
+// Payment Ways & Status colors
+$bg-bank: #dcfce7;
+$bg-cash: #dbeafe;
+$bg-paid: $light_green;
+$bg-partial: $light_orang2;
+$bg-unpaid: $light_red2;
+
+// Form specific
+$form-border: #ddd; 
+$input-bg-hover: #f5f5f5;
+$overlay-bg: rgba(0, 0, 0, 0.45);
+
+// fonts
+$golos_fonts: "Golos Text", sans-serif;
+$roboto: "Roboto", sans-serif;
+$inter: "Inter", system-ui, -apple-system, sans-serif;

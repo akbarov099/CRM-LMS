@@ -67,3 +67,28 @@ select {
   height: auto;
   margin: 0 auto;
 }
+
+.board__btn {
+  position: fixed;
+  right: 60px;
+  bottom: 80px;
+  z-index: 999;
+}
+
+.arxiv {
+  width: 180px;
+  height: 40px;
+  background: $blue;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $white;
+  @include displayFlex(center);
+  gap: 5px;
+  border: none;
+  cursor: pointer;
+
+  .arxiv__icon {
+    font-size: 18px;
+  }
+}

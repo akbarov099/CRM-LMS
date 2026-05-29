@@ -2,7 +2,7 @@
   width: 100%;
   border-radius: 24px;
   background: $white;
-  box-shadow: $table-shadow; 
+  box-shadow: $table-shadow;
   padding: 24px 34px 34px 34px;
   position: relative;
   margin-top: 30px;
@@ -62,14 +62,31 @@
           font-weight: 400;
           font-size: 16px;
 
-          &:nth-child(1) { max-width: 30px; }
-          &:nth-child(2) { max-width: 600px; }
-          &:nth-child(3) { max-width: 150px; }
-          &:nth-child(4) { max-width: 100px; }
-          &:nth-child(5) { max-width: 100px; }
-          &:nth-child(6) { max-width: 180px; }
-          &:nth-child(7) { max-width: 180px; }
-          &:nth-child(8) { max-width: 90px; padding-right: 18px; }
+          &:nth-child(1) {
+            max-width: 30px;
+          }
+          &:nth-child(2) {
+            max-width: 400px;
+          }
+          &:nth-child(3) {
+            max-width: 150px;
+          }
+          &:nth-child(4) {
+            max-width: 100px;
+          }
+          &:nth-child(5) {
+            max-width: 100px;
+          }
+          &:nth-child(6) {
+            max-width: 100px;
+          }
+          &:nth-child(7) {
+            max-width: 180px;
+          }
+          &:nth-child(8) {
+            max-width: 150px;
+            padding-right: 18px;
+          }
           &:nth-last-child(1) {
             max-width: 100px;
             @include displayFlex(end);
@@ -86,7 +103,7 @@
         display: flex;
         @include displayFlex(space-between);
         background-color: transparent;
-        border-bottom: 1px solid $table-row-border; 
+        border-bottom: 1px solid $table-row-border;
         padding-left: 20px;
 
         td {
@@ -100,14 +117,30 @@
           text-overflow: ellipsis;
           white-space: nowrap;
 
-          &:nth-child(1) { max-width: 30px; }
-          &:nth-child(2) { max-width: 600px; }
-          &:nth-child(3) { max-width: 150px; }
-          &:nth-child(4) { max-width: 100px; }
-          &:nth-child(5) { max-width: 100px; }
-          &:nth-child(6) { max-width: 180px; }
-          &:nth-child(7) { max-width: 180px; }
-          &:nth-child(8) { max-width: 90px; }
+          &:nth-child(1) {
+            max-width: 30px;
+          }
+          &:nth-child(2) {
+            max-width: 400px;
+          }
+          &:nth-child(3) {
+            max-width: 150px;
+          }
+          &:nth-child(4) {
+            max-width: 100px;
+          }
+          &:nth-child(5) {
+            max-width: 100px;
+          }
+          &:nth-child(6) {
+            max-width: 100px;
+          }
+          &:nth-child(7) {
+            max-width: 180px;
+          }
+          &:nth-child(8) {
+            max-width: 150px;
+          }
           &:nth-last-child(1) {
             max-width: 100px;
             @include displayFlex(end);
@@ -174,12 +207,12 @@
             color: $blue;
           }
           .table_btn_change {
-            background: $bg-partial;
-            color: $orang;
+            background: rgba($primary-color, 0.2);
+            color: $primary-color;
           }
           .table_btn_delete {
-            background: $bg-unpaid;
-            color: $light_red;
+            background: rgba($danger-color, 0.1);
+            color: $danger-color;
           }
           .table_btn_paid {
             background: $bg-bank;

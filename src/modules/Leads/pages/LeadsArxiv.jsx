@@ -1,7 +1,6 @@
 
-
 export const LeadsArxiv = () => {
   return (
-    <div>LeadsArxiv</div>
+    <div>LeadsArxive</div>
   )
 }

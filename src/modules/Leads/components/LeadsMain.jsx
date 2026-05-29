@@ -1,28 +1,93 @@
 import React, { useState } from "react";
-import { LuFolderClock } from "react-icons/lu";
 import {
   DndContext,
   useDroppable,
   useDraggable,
   closestCenter,
 } from "@dnd-kit/core";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const initialLeads = [
-  { id: 1, name: "Ali Valiyev", phone: "0554 88 98 88", course: "Frontend", status: "NEW" },
-  { id: 2, name: "Sara Karimova", phone: "0700 11 22 33", course: "English", status: "CALLED" },
-  { id: 3, name: "John Doe", phone: "0999 88 77 66", course: "Design", status: "REGISTERED" },
-  { id: 4, name: "Madina Karimova", phone: "0550 12 34 56", course: "UI/UX", status: "NOT_INTERESTED", reason: "Нет времени" },
-  { id: 5, name: "Ahmad Karimov", phone: "0555 11 22 33", course: "Backend", status: "WANTS_TO_COME" },
-
+  {
+    id: 1,
+    name: "Ali Valiyev",
+    phone: "0554 88 98 88",
+    course: "Frontend",
+    status: "NEW",
+  },
+  {
+    id: 2,
+    name: "Sara Karimova",
+    phone: "0700 11 22 33",
+    course: "English",
+    status: "CALLED",
+  },
+  {
+    id: 3,
+    name: "John Doe",
+    phone: "0999 88 77 66",
+    course: "Design",
+    status: "REGISTERED",
+  },
+  {
+    id: 4,
+    name: "Madina Karimova",
+    phone: "0550 12 34 56",
+    course: "UI/UX",
+    status: "NOT_INTERESTED",
+    reason: "Нет времени",
+  },
+  {
+    id: 5,
+    name: "Ahmad Karimov",
+    phone: "0555 11 22 33",
+    course: "Backend",
+    status: "WANTS_TO_COME",
+  },
+  {
+    id: 6,
+    name: "Ali Valiyev",
+    phone: "0554 88 98 88",
+    course: "Frontend",
+    status: "NEW",
+  },
+  {
+    id: 7,
+    name: "Sara Karimova",
+    phone: "0700 11 22 33",
+    course: "English",
+    status: "CALLED",
+  },
+  {
+    id: 8,
+    name: "John Doe",
+    phone: "0999 88 77 66",
+    course: "Design",
+    status: "REGISTERED",
+  },
+  {
+    id: 9,
+    name: "Madina Karimova",
+    phone: "0550 12 34 56",
+    course: "UI/UX",
+    status: "NOT_INTERESTED",
+    reason: "Нет времени",
+  },
+  {
+    id: 10,
+    name: "Ahmad Karimov",
+    phone: "0555 11 22 33",
+    course: "Backend",
+    status: "WANTS_TO_COME",
+  },
 ];
 
 const columns = [
-  { key: "NEW", title: "Новый" },
-  { key: "CALLED", title: "Кому мы звонили" },
-  { key: "NOT_INTERESTED", title: "Отказались" },
-  { key: "WANTS_TO_COME", title: "Кто хочет прийти" },
-  { key: "REGISTERED", title: "Кто записался" },
+  { key: "NEW", title: "new_lead" },
+  { key: "CALLED", title: "called_leads" },
+  { key: "NOT_INTERESTED", title: "not_interested" },
+  { key: "WANTS_TO_COME", title: "wants_to_come" },
+  { key: "REGISTERED", title: "registered_leads" },
 ];
 
 const LeadCard = ({ lead }) => {
@@ -76,6 +141,8 @@ const Column = ({ status, title, leads }) => {
 };
 
 export const LeadsMain = () => {
+  const { t } = useTranslation();
+
   const [leads, setLeads] = useState(initialLeads);
 
   const handleDragEnd = (event) => {
@@ -89,7 +156,7 @@ export const LeadsMain = () => {
     let reason = "";
 
     if (newStatus === "NOT_INTERESTED") {
-      reason = prompt("Причина отказа?") || "";
+      reason = prompt(t("reject_reason")) || "";
     }
 
     setLeads((prev) =>
@@ -102,24 +169,22 @@ export const LeadsMain = () => {
   };
 
   return (
-    <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-
+    <DndContext
+      collisionDetection={closestCenter}
+      onDragEnd={handleDragEnd}
+    >
       <div className="board">
         {columns.map((col) => (
           <Column
             key={col.key}
             status={col.key}
-            title={col.title}
+            title={t(col.title)}
             leads={leads.filter((l) => l.status === col.key)}
           />
         ))}
       </div>
-      <Link to="/leads/arxiv" className="board__btn">
-        <button className="arxiv">
-          <LuFolderClock className="arxiv__icon"/>
-          Архив
-        </button>
-      </Link>
+
+   
     </DndContext>
   );
 };

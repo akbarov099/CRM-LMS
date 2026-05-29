@@ -9,66 +9,8 @@ import { MdOutlinePayment } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { HiOutlineXCircle } from "react-icons/hi";
 import { TbClockDollar } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 
-const stats = [
-    {
-        icon: <PiStudentFill size={22} />,
-        label: "Всего учеников",
-        value: 100,
-        color: "blue",
-    },
-    {
-        icon: <PiUsersThreeFill size={22} />,
-        label: "Кол-во новых лидов",
-        value: 100,
-        color: "purple",
-    },
-    {
-        icon: <PiBriefcaseFill size={22} />,
-        label: "Активных сотрудников",
-        value: 100,
-        color: "teal",
-    },
-    {
-        icon: <PiChalkboardTeacherFill size={22} />,
-        label: "Активных групп",
-        value: 100,
-        color: "amber",
-    },
-];
-
-const payments = [
-    {
-        icon: <RiMoneyDollarCircleLine size={22} />,
-        label: "Оплатили",
-        value: 100,
-        color: "green",
-        badge: { text: "100%", type: "success" },
-    },
-    {
-        icon: <MdOutlinePayment size={22} />,
-        label: "Передоплата",
-        value: 100,
-        color: "blue",
-        badge: { text: "150%", type: "transferfee" },
-
-    },
-
-    {
-        icon: <TbClockDollar size={22} />,
-        label: "Частично оплатили",
-        value: 100,
-        color: "amber",
-        badge: { text: "50%", type: "warning" },
-    },
-    {
-        icon: <HiOutlineXCircle size={22} />,
-        label: "Не оплатили",
-        value: 100,
-        color: "red",
-        badge: { text: "0%", type: "danger" },
-    },
-];
 
 const StatCard = ({ icon, label, value, color, badge }) => {
     return (
@@ -92,17 +34,82 @@ const StatCard = ({ icon, label, value, color, badge }) => {
 };
 
 export const QuantityDashboard = () => {
+    const { t } = useTranslation();
+
+    const stats = [
+        {
+            icon: <PiStudentFill size={22} />,
+            label: t("total_students"),
+            value: 100,
+            color: "blue",
+        },
+        {
+            icon: <PiUsersThreeFill size={22} />,
+            label: t("new_leads"),
+            value: 100,
+            color: "purple",
+        },
+        {
+            icon: <PiBriefcaseFill size={22} />,
+            label: t("active_employees"),
+            value: 100,
+            color: "teal",
+        },
+        {
+            icon: <PiChalkboardTeacherFill size={22} />,
+            label: t("active_groups"),
+            value: 100,
+            color: "amber",
+        },
+    ];
+
+    const payments = [
+        {
+            icon: <RiMoneyDollarCircleLine size={22} />,
+            label: t("paid"),
+            value: 100,
+            color: "green",
+            badge: { text: "100%", type: "success" },
+        },
+        {
+            icon: <MdOutlinePayment size={22} />,
+            label: t("prepaid"),
+            value: 100,
+            color: "blue",
+            badge: { text: "150%", type: "transferfee" },
+
+        },
+
+        {
+            icon: <TbClockDollar size={22} />,
+            label: t("partiallyPaid"),
+            value: 100,
+            color: "amber",
+            badge: { text: "50%", type: "warning" },
+        },
+        {
+            icon: <HiOutlineXCircle size={22} />,
+            label: t("notPaid"),
+            value: 100,
+            color: "red",
+            badge: { text: "0%", type: "danger" },
+        },
+    ];
+
+
+
+
     return (
         <section className="dashboard">
-            <h2>Количество</h2>
-            <h3>Статистика по количеству</h3>
+            <h2>{t("title")}</h2>
+            <h3>{t("statistics")}</h3>
             <ul className="quantity__wrapper">
                 {stats.map((item, i) => (
                     <StatCard key={i} {...item} />
                 ))}
             </ul>
-            <h2>Оплаты</h2>
-            <h3>Статистика по оплатам</h3>
+            <h2>{t("payments")}</h2>
+            <h3>{t("paymentStatistics")}</h3>
             <ul className="quantity__wrapper">
                 {payments.map((item, i) => (
                     <StatCard key={i} {...item} />

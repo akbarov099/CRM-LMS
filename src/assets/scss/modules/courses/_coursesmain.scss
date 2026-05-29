@@ -6,7 +6,7 @@
   margin-top: 42px;
   padding: 0;
 
-  .groupsmain__item {
+  .coursesmain__item {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -14,16 +14,16 @@
     width: 100%;
     height: 180px;
     background: $white;
-    border-radius: 20px; 
+    border-radius: 20px;
     padding: 30px;
-    border: 1px solid $card-border-soft; 
+    border: 1px solid $card-border-soft;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
-    box-shadow: $card-shadow-soft; 
+    box-shadow: $card-shadow-soft;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: -50%;
       right: -50%;
@@ -45,6 +45,86 @@
 
       h2 {
         color: $primary-color;
+      }
+
+      .coursesmain__btns {
+        .coursesmain__update-btn,
+        .coursesmain__delete-btn {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .coursesmain__btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      z-index: 10;
+    }
+
+    .coursesmain__update-btn {
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: rgba($primary-color, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $primary-color;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: scale(0.8);
+
+      &:hover {
+        background: rgba($primary-color, 0.2);
+        transform: scale(1.1);
+      }
+
+      &:active {
+        background: rgba($primary-color, 0.3);
+        transform: scale(0.95);
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .coursesmain__delete-btn {
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: rgba($danger-color, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $danger-color;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: scale(0.8);
+
+      &:hover {
+        background: rgba($danger-color, 0.2);
+        transform: scale(1.1);
+      }
+
+      &:active {
+        background: rgba($danger-color, 0.3);
+        transform: scale(0.95);
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
       }
     }
 
@@ -72,17 +152,17 @@
       font-family: $roboto;
       font-weight: 600;
       font-size: 17px;
-      color: $teal; 
-      background: $teal-bg-light; 
+      color: $teal;
+      background: $teal-bg-light;
       padding: 6px 14px;
       border-radius: 8px;
       width: fit-content;
       z-index: 1;
       display: flex;
       align-items: center;
-      
+
       &::before {
-        content: '•';
+        content: "•";
         margin-right: 8px;
         font-size: 20px;
       }

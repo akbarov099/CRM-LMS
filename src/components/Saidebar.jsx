@@ -8,8 +8,11 @@ import { MdPayments } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { VscVariableGroup } from "react-icons/vsc";
+import { useTranslation } from "react-i18next";
 
 export const Saidebar = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="saidebar">
       <button className="menu__burger">
@@ -18,13 +21,13 @@ export const Saidebar = () => {
       <img src={Logo} alt="logo" className="saidebar__logo" />
 
       <ul className={`sidebar_list`}>
-        <SidebarItem Icon={IoBarChartOutline} text={"Приборная"} path='/'/>
-        <SidebarItem Icon={HiOutlineUserCircle} text={"Сотрудники"} path='/admin'/>
-        <SidebarItem Icon={VscVariableGroup} text={"Курсы"} path='/courses'/>
-        <SidebarItem Icon={VscGroupByRefType} text={"Группы"} path='/groups'/>
-        <SidebarItem Icon={PiUsers} text={"Студенты"} path='/students'/>
-        <SidebarItem Icon={MdPayments} text={"Оплата"} path='/payment'/>
-        <SidebarItem Icon={IoBarChartOutline} text={"Лиды"} path='/leads'/>
+        <SidebarItem Icon={IoBarChartOutline} text={t("dashboard")} path='/' />
+        <SidebarItem Icon={HiOutlineUserCircle} text={t("employees")} path='/admin' />
+        <SidebarItem Icon={VscVariableGroup} text={t("courses")} path='/courses' />
+        <SidebarItem Icon={VscGroupByRefType} text={t("groups")} path='/groups' />
+        <SidebarItem Icon={PiUsers} text={t("students")} path='/students' />
+        <SidebarItem Icon={MdPayments} text={t("payment")} path='/payment' />
+        <SidebarItem Icon={IoBarChartOutline} text={t("leads")} path='/leads' />
       </ul>
     </div>
   );

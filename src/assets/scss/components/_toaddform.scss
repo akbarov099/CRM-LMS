@@ -192,7 +192,7 @@
       color: $white;
 
       &:hover {
-        background: darken($light_red, 5%);
+        background: $light_red;
       }
     }
 
@@ -202,7 +202,7 @@
       color: $white;
 
       &:hover {
-        background: darken($blue, 5%);
+        background: $blue;
       }
     }
   }

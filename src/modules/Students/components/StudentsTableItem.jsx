@@ -1,57 +1,54 @@
+import { useTranslation } from "react-i18next";
 import { FiEye } from "react-icons/fi";
 import { LuPencil } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-const wayMap = {
-    BANK: {
-        text: "Банк",
-        className: "bank",
-    },
-    CASH: {
-        text: "Наличные",
-        className: "cash",
-    },
-    UNPAID:{
-        text: "Неоплачено",
-        className: "unpaid",
-    }
-};
 
-const statusMap = {
-    PAID: {
-        text: "Оплачено",
-        className: "paid",
-    },
-    PARTIAL: {
-        text: "Частично оплачено",
-        className: "partial",
-    },
-    UNPAID: {
-        text: "Неоплачено",
-        className: "unpaid",
-    },
-};
+export const StudentsTableItem = (props) => {
+    const { t } = useTranslation();
 
-export const StudentsTableItem = ({
-    index,
-    fullName,
-    phone,
-    courses,
-    salary,
-    way,
-    status,
-}) => {
-    const wayData = wayMap[way];
-    const statusData = statusMap[status];
+    const wayMap = {
+        BANK: {
+            text: t("bank"),
+            className: "bank",
+        },
+        CASH: {
+            text: t("cash"),
+            className: "cash",
+        },
+        UNPAID: {
+            text: t("unpaid"),
+            className: "unpaid",
+        }
+    };
+
+    const statusMap = {
+        PAID: {
+            text: t("paid"),
+            className: "paid",
+        },
+        PARTIAL: {
+            text: t("partial"),
+            className: "partial",
+        },
+        UNPAID: {
+            text: t("unpaid"),
+            className: "unpaid",
+        },
+    };
+
+    const wayData = wayMap[props.way];
+    const statusData = statusMap[props.status];
 
     return (
         <tr>
-            <td>{index}</td>
-            <td>{fullName}</td>
-            <td>{phone}</td>
-            <td>{courses}</td>
-            <td>{salary} C</td>
+            <td>{props.index}</td>
+            <td>{props.fullName}</td>
+            <td>{props.phone}</td>
+            <td>{props.courses}</td>
+            <td>{props.salary} C</td>
+            <td>{props.balance} C</td>
             <td>
                 <span className={`way ${wayData.className}`}>
                     {wayData.text}

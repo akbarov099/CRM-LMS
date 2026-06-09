@@ -75,6 +75,34 @@ const translationsKg = {
   delete_course_confirm: "Сиз бул курсту о'чүргүңүз келет:",
   confirm_delete_course: "Сиз бул курсту о'чүргүңүзгө ынанасызби?",
   students_in_this_course: "Бул курста {{quantitystudents}} окуучу",
+
+  select_mentor: "Ментор тандаңыз",
+  course: "Курс",
+  select_course: "Курс тандаңыз",
+  lesson_days: "Сабак күндөрү",
+  lesson_time: "Сабак убактысы",
+  start: "Башталышы",
+  end: "Аякталышы",
+  odd: "Так (Дш-Шр-Жм)",
+  even: "Жуп (Шш-Бш-Иш)",
+  everyday: "Күн сайын",
+  Mon: "Дш",
+  Tue: "Шш",
+  Wed: "Шр",
+  Thu: "Бш",
+  Fri: "Жм",
+  Sat: "Иш",
+  Sun: "Жк",
+
+  update_group: "Топту өзгөртүү",
+  delete_group: "Топту өчүрүү",
+  delete_confirm: "Чындап эле өчүргүңүз келеби",
+  delete_warning: "Бул аракетти кайтарып болбойт.",
+  save: "Сактоо",
+  delete: "Өчүрүү",
+
+  full_name: "Толук аты-жөнү",
+  enter_name: "Атыңызды киргизиңиз",
 };
 
 export default translationsKg;

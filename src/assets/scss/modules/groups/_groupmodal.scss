@@ -1,0 +1,365 @@
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $overlay-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(2px);
+  }
+}
+
+.modal {
+  padding: 40px;
+  position: relative;
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px -12px rgba($black, 0.15);
+  width: 90%;
+  max-width: 500px;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+
+  h2 {
+    font-family: $golos_fonts;
+    font-weight: 600;
+    font-size: 20px;
+    color: $black_light;
+    margin-bottom: 20px;
+  }
+
+  &__field {
+    margin-bottom: 14px;
+
+    label {
+      display: block;
+      font-family: $roboto;
+      font-size: 13px;
+      font-weight: 500;
+      color: $text-muted;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid $form-border;
+      border-radius: 8px;
+      font-family: $roboto;
+      font-size: 14px;
+      color: $text-main;
+      background: $white;
+      outline: none;
+      transition: border-color 0.2s ease;
+
+      &:hover {
+        background: $input-bg-hover;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+        background: $white;
+      }
+
+      &::placeholder {
+        color: $gray_light;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  &__cancel-btn {
+    padding: 9px 18px;
+    border: 1px solid $white_dark;
+    border-radius: 8px;
+    background: transparent;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-muted;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $white_dark;
+      color: $black_light;
+    }
+  }
+
+  &__submit-btn {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 8px;
+    background: $primary-color;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: darken($primary-color, 6%);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: $text-muted;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $white_dark;
+      color: $black_light;
+    }
+  }
+
+  &__select-wrap {
+    position: relative;
+
+    &::after {
+      content: "▾";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $gray;
+      pointer-events: none;
+      font-size: 13px;
+    }
+
+    select {
+      width: 100%;
+      padding: 9px 12px;
+      padding-right: 32px;
+      border: 1px solid $form-border;
+      border-radius: 8px;
+      font-family: $roboto;
+      font-size: 14px;
+      color: $text-main;
+      background: $white;
+      outline: none;
+      appearance: none;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+
+      &:hover {
+        background: $input-bg-hover;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+        background: $white;
+      }
+    }
+  }
+
+  &__presets {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__preset-btn {
+    padding: 5px 12px;
+    border: 1px solid $form-border;
+    border-radius: 20px;
+    background: transparent;
+    font-family: $roboto;
+    font-size: 12px;
+    font-weight: 500;
+    color: $text-muted;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+
+    &.active {
+      background: rgba($primary-color, 0.1);
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  &__days {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  &__day-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $form-border;
+    border-radius: 8px;
+    background: transparent;
+    font-family: $roboto;
+    font-size: 12px;
+    font-weight: 500;
+    color: $text-muted;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+
+    &.active {
+      background: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  &__time-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__time-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    border: 1px solid $form-border;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: border-color 0.2s ease;
+
+    &:focus-within {
+      border-color: $primary-color;
+    }
+
+    span {
+      font-family: $roboto;
+      font-size: 12px;
+      color: $text-muted;
+      white-space: nowrap;
+    }
+
+    input[type="time"] {
+      border: none;
+      outline: none;
+      font-family: $roboto;
+      font-size: 14px;
+      color: $text-main;
+      background: transparent;
+      width: 100%;
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__time-sep {
+    font-size: 18px;
+    color: $gray_light;
+    flex-shrink: 0;
+  }
+
+  &--delete {
+    max-width: 400px;
+    text-align: center;
+  }
+
+  &__delete-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba($danger-color, 0.1);
+    color: $danger-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  &__delete-text {
+    font-family: $roboto;
+    font-size: 14px;
+    color: $text-muted;
+    line-height: 1.6;
+    margin-bottom: 4px;
+  }
+
+  &__delete-name {
+    font-weight: 600;
+    color: $text-main;
+  }
+
+  &__delete-btn {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 8px;
+    background: $danger-color;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $light_red;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

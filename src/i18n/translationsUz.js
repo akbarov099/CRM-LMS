@@ -42,7 +42,6 @@ const translationsUz = {
   paid_students: "To‘langanlar",
   unpaid_students: "To‘lanmaganlar",
   partial_paid_students: "Qisman to‘langanlar",
-  createlead: "Лид түзүү",
   new_lead: "Yangi",
   called_leads: "Qo‘ng‘iroq qilinganlar",
   not_interested: "Rad etganlar",
@@ -75,6 +74,35 @@ const translationsUz = {
   delete_course_confirm: "Siz quyidagi kursni o'chirmoqchisiz:",
   confirm_delete_course: "Siz ushbu kursni o'chirishga ishonchisizmi?",
   students_in_this_course: "Ushbu kursda {{quantitystudents}} ta talaba",
+
+  select_mentor: "Mentorni tanlang",
+  course: "Kurs",
+  select_course: "Kursni tanlang",
+  lesson_days: "Dars kunlari",
+  lesson_time: "Dars vaqti",
+  start: "Boshlanish",
+  end: "Tugash",
+  odd: "Toq (Du-Cho-Ju)",
+  even: "Juft (Se-Pa-Sha)",
+  everyday: "Har kuni",
+  Mon: "Du",
+  Tue: "Se",
+  Wed: "Cho",
+  Thu: "Pa",
+  Fri: "Ju",
+  Sat: "Sha",
+  Sun: "Ya",
+
+  update_group: "Guruhni tahrirlash",
+  delete_group: "Guruhni o'chirish",
+  delete_confirm: "Haqiqatan ham o'chirmoqchimisiz",
+  delete_warning: "Bu amalni ortga qaytarib bo'lmaydi.",
+  save: "Saqlash",
+  delete: "O'chirish",
+
+  createlead: "Lid qo'shish",
+  full_name: "To'liq ism",
+  enter_name: "Ismni kiriting",
 };
 
 export default translationsUz;

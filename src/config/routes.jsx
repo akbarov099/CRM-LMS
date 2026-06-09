@@ -9,7 +9,6 @@ import { Leads } from "../modules/Leads/Leads";
 import MainLayout from "../layout/MainLayout";
 import { AdminToAdd } from "../modules/Admin/pages/AdminToAdd";
 import { Profile } from "../modules/Profile/Profile";
-import { GroupsToAdd } from "../modules/Groups/pages/GroupsToAdd";
 import { StudentsToAdd } from "../modules/Students/pages/StudentsToAdd";
 import { Courses } from "../modules/Courses/Courses";
 import AdminArxiv from "../modules/Admin/pages/AdminArxiv";
@@ -44,7 +43,6 @@ export const routes = [
         path: "groups",
         children: [
           { index: true, element: <Groups /> },
-          { path: "add", element: <GroupsToAdd /> },
           { path: "arxiv", element: <GroupsArxiv /> }
         ]
       },

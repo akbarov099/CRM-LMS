@@ -18,7 +18,7 @@
     transition: 0.3s linear;
     cursor: pointer;
     padding: 24px 30px;
-    position: relative; // Add this for absolute positioning of buttons
+    position: relative;
 
     &:hover {
       transform: translateY(-4px);
@@ -44,7 +44,6 @@
       z-index: 10;
     }
 
-    // Update Button - BLUE/PRIMARY
     .groupsmain__update-btn {
       width: 36px;
       height: 36px;
@@ -76,7 +75,6 @@
       }
     }
 
-    // Delete Button - RED
     .groupsmain__delete-btn {
       width: 36px;
       height: 36px;

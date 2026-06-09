@@ -74,6 +74,34 @@ const translationsRu = {
   delete_course_confirm: "Вы собираетесь удалить этот курс:",
   confirm_delete_course: "Вы уверены, что хотите удалить этот курс?",
   students_in_this_course: "{{quantitystudents}} студентов в этом курсе",
+
+  select_mentor: "Выберите ментора",
+  course: "Курс",
+  select_course: "Выберите курс",
+  lesson_days: "Дни занятий",
+  lesson_time: "Время занятий",
+  start: "Начало",
+  end: "Конец",
+  odd: "Нечётные (Пн-Ср-Пт)",
+  even: "Чётные (Вт-Чт-Сб)",
+  everyday: "Каждый день",
+  Mon: "Пн",
+  Tue: "Вт",
+  Wed: "Ср",
+  Thu: "Чт",
+  Fri: "Пт",
+  Sat: "Сб",
+  Sun: "Вс",
+
+  update_group: "Редактировать группу",
+  delete_group: "Удалить группу",
+  delete_confirm: "Вы действительно хотите удалить",
+  delete_warning: "Это действие нельзя отменить.",
+  save: "Сохранить",
+  delete: "Удалить",
+
+  full_name: "Полное имя",
+  enter_name: "Введите имя",
 };
 
 export default translationsRu;
